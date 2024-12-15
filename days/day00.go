@@ -19,11 +19,11 @@ func Day00(part int) {
 }
 
 func Part1Day00(input string) {
-	fmt.Println("=== Day 0, Part 1 ===")
+	fmt.Println("=== Day 00, Part 1 ===")
 	fmt.Println(input)
 }
 
 func Part2Day00(input string) {
-	fmt.Println("=== Day 0, Part 2 ===")
+	fmt.Println("=== Day 00, Part 2 ===")
 	fmt.Println(input)
 }

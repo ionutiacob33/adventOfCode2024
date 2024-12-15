@@ -8,15 +8,17 @@ import (
 
 func main() {
 	solutions := map[int]func(part int){
-		1: days.Day01,
-		2: days.Day02,
-		3: days.Day03,
-		4: days.Day04,
-		5: days.Day05,
-		6: days.Day06,
-		7: days.Day07,
-		8: days.Day08,
-		9: days.Day09,
+		1:  days.Day01,
+		2:  days.Day02,
+		3:  days.Day03,
+		4:  days.Day04,
+		5:  days.Day05,
+		6:  days.Day06,
+		7:  days.Day07,
+		8:  days.Day08,
+		9:  days.Day09,
+		10: days.Day10,
+		11: days.Day11,
 		// TODO
 	}
 
