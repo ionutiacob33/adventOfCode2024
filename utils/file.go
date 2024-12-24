@@ -27,3 +27,16 @@ func Read2dRuneArray(input string) [][]rune {
 
 	return grid
 }
+
+func printGrid(grid [][]rune) {
+	for i := 0; i < len(grid); i++ {
+		for j := 0; j < len(grid[i]); j++ {
+			if grid[i][j] == '.' {
+				fmt.Printf(" . ")
+			} else {
+				fmt.Printf("%d ", grid[i][j])
+			}
+		}
+		fmt.Println()
+	}
+}
