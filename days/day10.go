@@ -26,19 +26,6 @@ type point struct {
 var score map[point]int
 var visited map[point][]point
 
-func printGrid(grid [][]rune) {
-	for i := 0; i < len(grid); i++ {
-		for j := 0; j < len(grid[i]); j++ {
-			if grid[i][j] == '.' {
-				fmt.Printf(" . ")
-			} else {
-				fmt.Printf("%d ", grid[i][j])
-			}
-		}
-		fmt.Println()
-	}
-}
-
 func findScore(grid [][]rune, copyGrid [][]rune, originI int, originJ int, currentI int, currentJ int, previous rune) {
 	if currentI < 0 || currentJ < 0 || currentI >= len(grid) || currentJ >= len(grid[0]) {
 		return
