@@ -46,34 +46,6 @@ func flodFill(grid [][]rune, visited [][]bool, x, y int, plantType rune) (int, i
 	return area, perimeter
 }
 
-func flodFillSides(grid [][]rune, visited [][]bool, x, y int, plantType rune) (int, int) {
-	directions := [][3]int{{0, 1, 0}, {1, 0, 1}, {0, -1, 0}, {-1, 0, 1}}
-	stack := [][2]int{{x, y}}
-	visited[x][y] = true
-	area, perimeter := 0, 0
-
-	for len(stack) > 0 {
-		cx, cy := stack[len(stack)-1][0], stack[len(stack)-1][1]
-		stack = stack[:len(stack)-1]
-		area++
-
-		for _, d := range directions {
-			nx, ny := cx+d[0], cy+d[1]
-
-			if nx < 0 || nx >= len(grid) || ny < 0 || ny >= len(grid[0]) {
-				perimeter++
-			} else if grid[nx][ny] != plantType {
-				perimeter++
-			} else if !visited[nx][ny] {
-				visited[nx][ny] = true
-				stack = append(stack, [2]int{nx, ny})
-			}
-		}
-	}
-
-	return area, perimeter
-}
-
 func Part1Day12(input string) {
 	fmt.Println("=== Day 12, Part 1 ===")
 
